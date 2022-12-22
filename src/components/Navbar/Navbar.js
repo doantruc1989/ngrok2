@@ -67,6 +67,7 @@ const Navbar = () => {
                     : null}
                 <Link to='/cart'>
                     <div className="fas fa-shopping-cart" id="cart-btn"></div >
+                    {isEmpty ? null : <span>{totalItems}</span>}
                 </Link>
                 <div className="fas fa-bars" id="menu-btn" onClick={toggleNav}></div>
             </div>
