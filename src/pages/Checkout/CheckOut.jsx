@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Navbar2 from '../../components/Navbar/Navbar2'
 import { FaCheck, FaTimes } from 'react-icons/fa'
-import { Link, useNavigate, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import axiosAll from '../../other/axiosAll'
 
 import './checkout.css'

@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosAll = axios.create({
-    baseURL: 'https://605f-115-79-210-160.ngrok.io',
+    baseURL: 'https://ce1b-103-173-255-97.ap.ngrok.io/',
     headers: {
         'Content-Type': 'application/json',
     },
