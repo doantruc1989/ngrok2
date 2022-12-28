@@ -36,11 +36,13 @@
 }
 
 .header .icons span {
-    background-color: yellow;
-    padding: 3px;
-
-    font-size: 20px;
+    background-color: rgb(58, 161, 86);
+    padding: 3px 6px 2px;
+    position: absolute;
+    font-size: 16px;
     border-radius: 50%;
+    top: -13px;
+    right: -12px;
 }
 
 .header .icons div:hover {
@@ -82,4 +84,8 @@
 
 .menu-container .menu-item:hover {
     background-color: rgb(158, 151, 151);
+}
+
+#cart-btn {
+    position: relative;
 }
