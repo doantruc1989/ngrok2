@@ -3,6 +3,7 @@ import { useFetch } from './useFetch'
 import './products.css'
 import Navbar2 from '../../components/Navbar/Navbar2'
 import { useCart } from 'react-use-cart'
+import { Link } from 'react-router-dom'
 
 function Products() {
     const { loading, data } = useFetch()
@@ -51,7 +52,7 @@ function Products() {
                     {products.map((product) => {
                         return (
 
-                            <div className="box">
+                            <Link to={product.id} className="box">
                                 <div className="icons">
                                     <a className="fas fa-shopping-cart" onClick={() => addItem(product)}></a>
                                     <a href="#" className="fas fa-heart"></a>
@@ -72,7 +73,7 @@ function Products() {
                                     </div>
                                     <div className="price">{product.price} <span>{product.price}</span></div>
                                 </div>
-                            </div>
+                            </Link>
 
                         )
                     })}

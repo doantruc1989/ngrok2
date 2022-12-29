@@ -2,12 +2,14 @@ import React, { useState, useEffect } from 'react'
 import { useFetch } from './useFetch'
 import Navbar2 from '../../components/Navbar/Navbar2'
 import { useCart } from 'react-use-cart'
+import { Link } from 'react-router-dom'
 
 function Products() {
     const { loading, data } = useFetch()
     const [page, setPage] = useState(0)
     const [products, setProducts] = useState([])
     const { addItem } = useCart();
+
 
     useEffect(() => {
         if (loading) return
@@ -56,9 +58,9 @@ function Products() {
                                     <a href="#" className="fas fa-heart"></a>
                                     <a href="#" className="fas fa-eye"></a>
                                 </div>
-                                <div className="image">
+                                <Link to={'product/' + product.id} className="image">
                                     <img src={product.image} alt={product.productName} />
-                                </div>
+                                </Link>
                                 <div className="content">
                                     <h3>{product.productName}</h3>
                                     <h4>{product.content}</h4>

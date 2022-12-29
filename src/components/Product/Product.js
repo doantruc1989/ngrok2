@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react'
 import './product.css'
 import axiosAll from '../../other/axiosAll'
 import { useCart } from 'react-use-cart'
-
+import { Link } from 'react-router-dom';
 
 const Product = () => {
     const { addItem } = useCart();
@@ -33,9 +33,9 @@ const Product = () => {
                                 <a href="#" className="fas fa-heart"></a>
                                 <a href="#" className="fas fa-eye"></a>
                             </div>
-                            <div className="image">
+                            <Link to={'product/' + product.id} className="image">
                                 <img src={product.image} alt={product.productName} />
-                            </div>
+                            </Link>
                             <div className="content">
                                 <h3>{product.productName}</h3>
                                 <div className="stars">

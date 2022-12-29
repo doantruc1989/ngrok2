@@ -1,5 +1,6 @@
 import React from 'react'
 import './cart.css'
+import { Link } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom'
 import { useCart } from "react-use-cart";
 import Navbar2 from '../../components/Navbar/Navbar2';
